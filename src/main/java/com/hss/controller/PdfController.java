@@ -41,7 +41,6 @@ public class PdfController {
             //获取模板文件对象
             WordprocessingMLPackage template = WordTemplate2PdfUtil.getTemplate(docxPath);
             HashMap<String,String> data = new HashMap<>();
-            data.put("{name}","张三");
             data.put("{ordernofield}",orderNo);
             data.put("{areaaddressfield}",areaAddress);
             data.put("{starttimefield}",startTime);

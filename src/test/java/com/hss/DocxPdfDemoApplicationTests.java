@@ -50,7 +50,7 @@ public class DocxPdfDemoApplicationTests {
     }*/
 
     /**
-     * 根据world模板，生成world文件，在将world文件转成pdf
+     * 根据world模板，生成world文件，再将world文件转成pdf
      * 占位符：${xxx}，支持驼峰命名。
      * 遇到关键字不生效时，替换占位符名称即可。
      */
@@ -94,7 +94,7 @@ public class DocxPdfDemoApplicationTests {
      * 占位符：{xxx},不支持驼峰标识。全小写
      * 优点：由模板直接生成pdf文件，一步到位
      */
-    /*@Test
+    @Test
     public void worldTemplate2Pdf(){
         //字典项信息
         String orderNo = "test0001";
@@ -117,7 +117,6 @@ public class DocxPdfDemoApplicationTests {
             //获取模板文件对象
             WordprocessingMLPackage template = WordTemplate2PdfUtil.getTemplate(docxPath);
             HashMap<String,String> data = new HashMap<>();
-            data.put("{name}","张三");
             data.put("{ordernofield}",orderNo);
             data.put("{areaaddressfield}",areaAddress);
             data.put("{starttimefield}",startTime);
@@ -135,5 +134,5 @@ public class DocxPdfDemoApplicationTests {
             e.printStackTrace();
         }
 
-    }*/
+    }
 }
